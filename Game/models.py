@@ -1,3 +1,4 @@
+import random
 class Tile:
     def __init__(self, letter, value):
         self.letter = letter
@@ -12,6 +13,7 @@ class BagTiles:
             Tile("A", 1),
             Tile("A", 1),
         ]
+        random.shuffle(self.tiles)
 
     def take(self, count):
         tiles = []
