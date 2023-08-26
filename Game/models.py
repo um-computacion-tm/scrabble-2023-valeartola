@@ -1,4 +1,4 @@
-"""import random"""
+import random
 class Tile:
     def __init__(self, letter, value, cantidad):
         self.letter = letter
@@ -7,7 +7,7 @@ class Tile:
 
 class BagTiles:
     def __init__(self):
-        self.tiles = [Tile(letter, value, cantidad) for letter, value, cantidad in[
+        self.tiles = [
             Tile("A", 1, 12),
             Tile("B", 3, 2),
             Tile("C", 3, 4), 
@@ -36,8 +36,8 @@ class BagTiles:
             Tile("X", 8, 1),            
             Tile("Y", 4, 1),
             Tile("Z", 10, 1),
-        ]]
-        """random.shuffle(self.tiles)
+        ]
+        random.shuffle(self.tiles)
 
     def take(self, count):
         tiles = []
@@ -46,4 +46,4 @@ class BagTiles:
         return tiles
     
     def put(self, tiles):
-        self.tiles.extend(tiles)"""
+        self.tiles.extend(tiles)
