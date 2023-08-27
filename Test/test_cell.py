@@ -16,14 +16,14 @@ class TEstCell(unittest.TestCase):
         )
         self.assertIsNone(cell.letter)
         self.assertEqual(
-            cell.calculate_value,
+            cell.calculate_value(),
             0,
         )       
 
     
     def test_add_letter(self):
-        cell = Cell(multiplier = 1, multiplier_type = "letter")
-        tile = Tile(letter = "P", value = 3)
+        cell = Cell(multiplier = 1, multiplier_type = "")
+        letter = Tile(letter = "P", value = 3, cantidad = 2)
         cell.add_letter(letter = letter)
         self.assertEqual(
             cell.letter, letter
@@ -31,13 +31,24 @@ class TEstCell(unittest.TestCase):
 
     def test_cell_value(self):
         cell = Cell(multiplier = 1, multiplier_type = "letter")
-        tile = Tile(letter = "P", value = 3)
+        letter = Tile(letter = "P", value = 3, cantidad = 2)
         cell.add_letter(letter = letter)
         
         self.assertEqual(
-            cell.calculate_value,
+            cell.calculate_value(),
             3,
-        )       
+        )     
+
+    def test_cell_multiplier_word(self):
+        cell = Cell(multiplier = 2, multiplier_type = "letter")
+        letter = Tile(letter = "P", value = 3, cantidad = 2)
+        cell.add_letter(letter = letter)
+
+        self.assertEqual(
+            cell.calculate_value(),
+            6,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
