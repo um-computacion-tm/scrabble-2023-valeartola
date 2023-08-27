@@ -10,7 +10,7 @@ class Cell:
         self.letter = letter
 
     def calculate_value(self):
-        if self.lletter is None:
+        if self.letter is None:
             return 0
         if self.multiplier_type == "letter":
             return self.letter.value * self.multiplier
