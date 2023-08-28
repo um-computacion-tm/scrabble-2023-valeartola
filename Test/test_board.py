@@ -3,9 +3,9 @@ from Game.board import Board
 
 class TestPayer(unittest.TestCase):
     def tesst_init(self):
-        grid = Board() #player_1 (objeto) Player(clase)
+        board = Board() #player_1 (objeto) Player(clase)
         self.assertEqual(
-            len(board.grid.tiles),
+            len(board.grid),
             15,
         )
         self.assertEqual(
