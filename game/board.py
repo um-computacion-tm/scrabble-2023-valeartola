@@ -6,21 +6,17 @@ class Board:
             for _ in range(15)
         ]
     def validate_word_inside_board(self, word, location, orientation):
-        longitud_word = len(word)
-        fila, columna = location
-        if orientation == "H":
-            if columna + longitud_word <=15:
-                if i in range(longitud_word):
-                    if self.grid[fila][columna + i]. esta_vacia():
-                        return True
-            return False
-        elif orientation == "V":
-            if fila + longitud_word <= 15:
-                # Verificar si cada celda que ocuparía la palabra está vacía
-                for i in range(longitud_word):
-                    if self.grid[fila + i][columna].esta_vacia():
-                        return True
-            return False
-        else:
-            return False
+        len_word = len(word)
+        pos_x = location[0]
+        pos_y = location[1]
 
+        if orientation == "H":
+            if pos_x + len_word > 15:
+                return False
+            else:
+                return True
+        elif orientation == "V":
+            if pos_y + len_word > 15:
+                return False
+            else:
+                return True
