@@ -19,7 +19,7 @@ def main():
 
     while True:
         word = input("Ingrese una palabra: ")
-        location = input("Ingrese la ubicación (fila, columna): " )
+        location = input("Ingrese la ubicación (fila, columna): " ) 
         orientation = input("Ingrese la orientación (H para horizontal, V para vertical): ")
 
         if scrabble_game.board.validate_word_inside_board(word, location, orientation):
