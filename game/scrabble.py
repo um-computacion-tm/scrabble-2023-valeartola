@@ -18,5 +18,9 @@ class ScrabbleGame:
         if self.current_player is None:
             self.current_player = self.players[0]
         else:
-            index = self.players.index(self.current_player) + 1
-            self.current_player = self.players[1]
+            index = self.players.index(self.current_player)
+            if index == len(self.players) - 1:
+               self.current_player = self.players[0]
+            else:
+                self.current_player = self.players[index + 1]
+

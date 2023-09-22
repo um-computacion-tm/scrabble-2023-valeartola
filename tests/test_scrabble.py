@@ -29,13 +29,13 @@ class TestScrabbleGame(unittest.TestCase):
         assert scrabble_game.current_player == scrabble_game.players[1]
 
         
-"""    def test_nex_turn_when_player_is_last(self):
+    def test_nex_turn_when_player_is_last(self):
         scrabble_game = ScrabbleGame(players_count=3)
         scrabble_game.current_player = scrabble_game.players[2]
 
         scrabble_game.next_turn()
 
-        assert scrabble_game.current_player == scrabble_game.players[0]"""
+        assert scrabble_game.current_player == scrabble_game.players[0]
         
 
 if __name__ == '__main__':
