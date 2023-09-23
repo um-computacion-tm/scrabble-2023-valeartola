@@ -24,3 +24,4 @@ class ScrabbleGame:
             else:
                 self.current_player = self.players[index + 1]
 
+

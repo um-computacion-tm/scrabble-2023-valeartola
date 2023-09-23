@@ -5,3 +5,5 @@ CHANGELOG
 21/09: up to this point the tile, the board, the bad tile and the players have been added. Codeclimate and circleci were also configured
 
 22/09: correction of scrabble file code 
+
+23/09: correction of cell file code
