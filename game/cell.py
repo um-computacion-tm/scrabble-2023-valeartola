@@ -22,7 +22,7 @@ class Cell:
             return self.letter.value
         
         
-"""    def calculate_word_value(self):
+    def calculate_word_value(self, word):
         word_value = 0
         word_multiplier = 1
         for letter in word:
@@ -31,23 +31,4 @@ class Cell:
                 word_multiplier = letter.multiplier
                 letter.multiplier_type = None
         word_value *= word_multiplier
-        return word_value"""
-
-def calculate_word_value(self):
-    if self.word is None:
-        return 0
-    
-    word_value = 0
-    word_multiplier = 1
-    
-    for letter in self.word.cells:
-        word_value += letter.calculate_value()
-        if letter.multiplier_type == 'word':
-            word_multiplier *= letter.multiplier
-            letter.multiplier_type = None
-    
-    word_value *= word_multiplier
-    return word_value
-
-    
-    
+        return word_value

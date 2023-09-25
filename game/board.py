@@ -20,3 +20,4 @@ class Board:
                 return False
             else:
                 return True
+    
