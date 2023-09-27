@@ -6,7 +6,7 @@ class Cell:
         self.multiplier_type = multiplier_type
         self.letter = letter
         self.word = word
-        self.active = True
+        """self.active = True"""
     
     def add_letter(self, letter:Tile):
         self.letter = letter

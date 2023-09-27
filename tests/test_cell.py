@@ -2,7 +2,7 @@ import unittest
 from game.cell import Cell
 from game.models import Tile
 
-class TEstCell(unittest.TestCase):
+class TestCell(unittest.TestCase):
     def test_init(self):
         cell = Cell(multiplier=2, multiplier_type="letter")
 
