@@ -1,0 +1,11 @@
+CHANGELOG
+
+24/09: try again a new cell file code, but it didn't work 
+
+23/09: correction of cell file code
+
+22/09: correction of scrabble file code 
+
+21/09: up to this point the tile, the board, the bad tile and the players have been added. Codeclimate and circleci were also configured
+
+16/08: first commit in develop branch
