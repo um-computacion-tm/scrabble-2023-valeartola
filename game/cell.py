@@ -32,3 +32,4 @@ class Cell:
                 letter.multiplier_type = None
         word_value *= word_multiplier
         return word_value
+
