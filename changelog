@@ -1,5 +1,7 @@
 CHANGELOG
 
+05/10: add dictionary and test
+
 04/10: definitive correction of cell code and more test in test_cell
 
 24/09: try again a new cell file code, but it didn't work 
