@@ -1,12 +1,11 @@
 from game.models import Tile
 
 class Cell:
-    def __init__(self, multiplier=1, multiplier_type="", letter = None, word=None):
+    def __init__(self, multiplier=1, multiplier_type="", letter = None, word = None):
         self.multiplier = multiplier
         self.multiplier_type = multiplier_type
         self.letter = letter
         self.word = word
-        """self.active = True"""
     
     def add_letter(self, letter:Tile):
         self.letter = letter
@@ -32,4 +31,3 @@ class Cell:
                 letter.multiplier_type = None
         word_value *= word_multiplier
         return word_value
-
