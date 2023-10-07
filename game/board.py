@@ -7,7 +7,7 @@ class Board:
         ]
     def validate_word_inside_board(self, word, location, orientation):
         len_word = len(word)
-        pos_x = location[0]
+        pos_x = location[0] 
         pos_y = location[1]
 
         if orientation == "H":
@@ -21,3 +21,11 @@ class Board:
             else:
                 return True
     
+"""    def show_board(board):
+        print('\n  |' + ''.join([f' {str(row_index).rjust(2)} ' for row_index in range(15)]))
+        for row_index, row in enumerate(board.grid):
+            print(
+                str(row_index).rjust(2) +
+                '| ' +
+                ' '.join([repr(cell) for cell in row])
+            )"""
