@@ -1,5 +1,13 @@
 CHANGELOG
 
+09/10: Add special cells in board
+
+08/10: try main but it's not okey
+
+07/10: Add show_board but it's not connect
+
+06/10: modification in cell
+
 05/10: add dictionary and test
 
 04/10: definitive correction of cell code and more test in test_cell
