@@ -48,6 +48,28 @@ class Board:
         for ubication in double_letter:
             self.cell_multiplier(ubication, "letter", 2)
 
+    def put_words(self, word, location, orientation):
+        len_word = len(word)
+        pos_x = location[0]
+        pos_y = location[1]
+        if orientation == 'H':
+            for i in range (len_word):
+                self.grid[pos_x][pos_y + i].add_letter(word[i])
+        else:
+            for i in range (len_word):
+                self.grid[pos_x + i][pos_y].add_letter(word[i])
+
+    def validate_word_place_board(self,word,location,orientation):
+        center_of_board = (7, 7)
+        for i in range(len(word)):
+            pos_x = location[0] + i if orientation == "H" else location[0] 
+            pos_y = location[1] + i if orientation == "V" else location[1] 
+            print(f"posicion ({pos_x}, {pos_y}) de letra '{word[i]}'")
+            if pos_x == center_of_board[0] and pos_y == center_of_board[1]: 
+                print ("pasa por el centro")
+                return True
+        return False
+
 
 """    def show_board(board):
         print('\n  |' + ''.join([f' {str(row_index).rjust(2)} ' for row_index in range(15)]))
