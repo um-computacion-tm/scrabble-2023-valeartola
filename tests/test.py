@@ -165,14 +165,14 @@ class TestBagTile(unittest.TestCase):
 
     def test_take(self):
         bag = BagTiles()
-        tiles = bag.take(2)
+        tiles = bag.take(7)
         self.assertEqual(
             len(bag.tiles),
-            26,
+            21,
         )
         self.assertEqual(
             len(tiles),
-            2,
+            7,
         )
 
     def test_put(self):

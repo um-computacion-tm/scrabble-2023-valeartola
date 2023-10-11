@@ -71,11 +71,11 @@ class Board:
         return False
 
 
-"""    def show_board(board):
-        print('\n  |' + ''.join([f' {str(row_index).rjust(2)} ' for row_index in range(15)]))
-        for row_index, row in enumerate(board.grid):
-            print(
-                str(row_index).rjust(2) +
-                '| ' +
-                ' '.join([repr(cell) for cell in row])
-            )"""
+    # def show_board(board):
+    #     print('\n  |' + ''.join([f' {str(row_index).rjust(2)} ' for row_index in range(15)]))
+    #     for row_index, row in enumerate(board.grid):
+    #         print(
+    #             str(row_index).rjust(2) +
+    #             '| ' +
+    #             ' '.join([repr(cell) for cell in row])
+    #         )

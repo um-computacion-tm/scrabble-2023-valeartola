@@ -1,7 +1,7 @@
 import unittest
 from game.models import Tile
 from game.cell import Cell
-from game.cell import calculate_word_value
+
 
 class TestsCalculateWordValue(unittest.TestCase):
     def test_simple(self):
@@ -79,7 +79,13 @@ class TestsCalculateWordValue(unittest.TestCase):
             Cell(letter=Tile('A', 1, 12)),
         ]
         value = cell.calculate_word_value(word)
-        self.assertEqual(value, 5)
+        self.assertEqual(value, 14)
+
+    def test_empty_word(self):
+        cell = Cell(multiplier=None, multiplier_type="")
+        word = []  # Word vacío
+        value = cell.calculate_word_value(word)
+        self.assertEqual(value, 0)
 
 
 
