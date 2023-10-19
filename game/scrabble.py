@@ -11,11 +11,6 @@ class ScrabbleGame:
             self.players.append(Player(self.bag_tiles))
         self.current_player = None
 
-    def playing(self):
-        return True
-
-
-
     def get_player_count(self):
         while True:
             try:
@@ -37,10 +32,10 @@ class ScrabbleGame:
             else:
                 self.current_player = self.players[index + 1]
 
-    # def play(self, word, location, orientation):
-    #     self.validate_word(word, location, orientation)
-    #     words = self.board.put_words(word, location, orientation)
-    #     total = self.cell.calculate_word_value(words)
-    #     self.players[self.current_player].score += total
-    #     self.next_turn()
+    def play(self, word, location, orientation):
+        self.validate_word(word, location, orientation)
+        words = self.board.put_words(word, location, orientation)
+        total = self.cell.calculate_word_value(words)
+        self.players[self.current_player].score += total
+        self.next_turn()
 
