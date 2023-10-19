@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2023-10-18
+
+### Added
+-Add in main get_player count and print_board
+
 ## [0.1.3] - 2023-10-11
 
 ### Fixed
