@@ -24,3 +24,39 @@ from game.board import Board
 
 # if __name__ == '__main__':
 #     main()
+
+    def get_player_count():
+        while True:
+            try:
+                player_count = int(input('cantidad de jugadores (1-3): '))
+                if player_count <= 3:
+                    break
+            except Exception as e:
+                print('ingrese un numero válido por favor')
+        return player_count
+
+    def print_board(self):
+        board = ""
+        #header row
+        board += "  | " + "  | ".join(str(item) for item in range(0,10)) + "  | " + " | ".join(str(item) for item in range(10,15)) + " | "
+        board += "\n   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+        for i in range(0,10):
+            row = self.grid[i]
+            row_str = str(i) + "  | "
+            for cell in row:
+                if cell.letter is None:
+                    row_str += ".  | "
+                else:
+                    row_str += cell.letter + "  | "
+            board += "\n" + row_str
+        for i in range(10,15):
+            row = self.grid[i]
+            row_str = str(i) + " | "
+            for cell in row:
+                if cell.letter is None:
+                    row_str += ".  | "
+                else:
+                    row_str += cell.letter + "  | "
+            board += "\n" + row_str
+        board += "\n"
+        print(board)
