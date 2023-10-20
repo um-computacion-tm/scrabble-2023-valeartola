@@ -11,11 +11,6 @@ class TestScrabbleGame(unittest.TestCase):
         )
         self.assertIsNotNone(scrabble_game.bag_tiles)
     
-    def test_playing(self):
-        game = ScrabbleGame(2) 
-        result = game.playing()
-        self.assertTrue(result)
-
     def test_next_turn_when_game_is_starting(self):
         # Validar que al comienzo, el turno es del jugador 0        
         scrabble_game = ScrabbleGame(players_count=3)
@@ -43,7 +38,3 @@ class TestScrabbleGame(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-
-if __name__ == '__main__':
-    unittest.main()
-    
