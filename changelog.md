@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.7] - 2023-10-21
+
+### Added
+-Try a new function in player
+
 ## [0.1.6] - 2023-10-20
 
 ### Added
