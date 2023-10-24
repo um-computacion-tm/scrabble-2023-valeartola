@@ -1,6 +1,7 @@
 from game.board import Board
 from game.models import BagTiles
 from game.player import Player
+from game.cell import Cell
 
 class ScrabbleGame:
     def __init__(self, players_count: int):
@@ -8,8 +9,9 @@ class ScrabbleGame:
         self.bag_tiles = BagTiles()
         self.players:list[Player] = []
         for _ in range(players_count):
-            self.players.append(Player(self.bag_tiles))
+            self.players.append(Player())
         self.current_player = None
+        self.cell = Cell()
 
     def get_player_count(self):
         while True:
